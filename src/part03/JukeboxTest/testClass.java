@@ -1,0 +1,17 @@
+package part03.JukeboxTest;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+public class testClass {
+    public static void main(String[] args) {
+
+        Result res = JUnitCore.runClasses(JukeboxTest.class);
+        for(Failure failure: res.getFailures()){
+            System.out.println(failure.toString());
+        }
+        System.out.println("Jukebox result: "+res.wasSuccessful());
+
+    }
+}
